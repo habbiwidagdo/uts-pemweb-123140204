@@ -1,4 +1,3 @@
-// src/components/PaginationComponent.jsx
 import { Pagination, Form, Row, Col } from 'react-bootstrap';
 
 function PaginationComponent({ 
