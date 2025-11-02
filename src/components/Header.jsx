@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
@@ -13,23 +12,17 @@ const categories = [
   { name: 'Entertainment', value: 'entertainment' },
 ];
 
-// Komponen Header menerima prop 'onCategoryChange' dari App.jsx
 function Header({ onCategoryChange }) {
-  // Kita gunakan state lokal untuk menandai kategori mana yang sedang aktif
   const [activeCategory, setActiveCategory] = useState('general');
-
   const handleCategorySelect = (selectedKey) => {
-    // 1. Update state lokal untuk highlight di Navbar
     setActiveCategory(selectedKey);
-    // 2. Panggil fungsi prop untuk mengirim kategori yang dipilih ke App.jsx
     onCategoryChange(selectedKey);
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+    <Navbar className='navbar-footer' variant="dark" expand="lg" sticky="top">
       <Container>
-        {/* Anda bisa ganti nama portal dan NIM di sini */}
-        <Navbar.Brand href="#home">Habbi News (204)</Navbar.Brand>
+        <Navbar.Brand href="#home">HW News</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav
@@ -38,7 +31,6 @@ function Header({ onCategoryChange }) {
             onSelect={handleCategorySelect}
             className="me-auto"
           >
-            {/* Kita render daftar kategori secara dinamis */}
             {categories.map((cat) => (
               <Nav.Link key={cat.value} eventKey={cat.value} href={`#${cat.value}`}>
                 {cat.name}
