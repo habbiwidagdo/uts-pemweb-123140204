@@ -41,12 +41,11 @@ function NewsCard({ article }) {
         <Card.Text>
           {description ? description.substring(0, 100) + '...' : 'Tidak ada deskripsi.'}
         </Card.Text>
-        <Button 
-          variant="primary" 
+        <Button  
           href={url} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="mt-auto"
+          className="mt-auto btn"
         >
           Baca Selengkapnya
         </Button>

@@ -20,6 +20,11 @@ body {
     background-color: white;
 }
 
+.btn {
+    background-color: white;
+    color: #002d5a;
+}
+
 @media (min-width: 768px) {
   .main-container {
     padding: 2.5rem;
